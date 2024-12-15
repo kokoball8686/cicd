@@ -5,4 +5,4 @@ steps:
      - '-t'
      - 'asia-northeast1-docker.pkg.dev/kokoballcicd/pika-repo/pika2:lastest'
      - '.'
-images: ['gcr.io/kokoballcicd/pika2:lastest']
+images: ['asia-northeast1-docker.pkg.dev/kokoballcicd/pika-repo/pika2:lastest']
