@@ -8,7 +8,7 @@ RUN apt update \
     && npm install npm@8 \
     && npm run build
 # ---------- Stage 2 ---------------------------------
-FROM alpine:lastest
+FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 COPY --from=prototype /pikachu-volleyball ./
 RUN apk add nodejs npm && npm install http-server --force
