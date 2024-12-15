@@ -5,10 +5,9 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'asia-northeast1-docker.pkg.dev/kokoballcicd/pika-repo/pika2:lastest']
 
-- name: 'gcr.io/cloud-builders/gke-deploy'
-  args:
-  - run
-  - --filename=k8s/
-  - --location=asia-northeast3-a
-  - --cluster=card-game-cluster
-  
+  - name: 'gcr.io/cloud-builders/gke-deploy'
+    args:
+    - run
+    - --location=	asia-northeast1
+    - --cluster=kokoballcluster
+    
