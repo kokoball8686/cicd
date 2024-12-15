@@ -1,0 +1,37 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: pika-cd
+ labels:
+   app: pika
+spec:
+ replicas: 3
+ selector:
+   matchLabels:
+     app: pika
+ template:
+   metadata:
+     labels:
+       app: pika
+   spec:
+     containers:
+       - name: pika
+         image: asia-northeast1-docker.pkg.dev/kokoballcicd/pika-repo/pika2:lastest
+         imagePullPolicy: Always
+         ports:
+           - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pika-service
+  labels:
+    app: pika
+spec:
+  ports:
+    - port: 80
+      targetPort: 8080
+  selector:
+    app: pika
