@@ -1,5 +1,5 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/pika:stable', '.']
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/pika2:lastest', '.']
 
-images: ['gcr.io/$PROJECT_ID/pika:stable']
+images: ['gcr.io/$PROJECT_ID/pika2:lastest']
